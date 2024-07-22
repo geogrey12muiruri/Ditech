@@ -144,7 +144,7 @@ export const collabContent = [
 export const collabApps = [
   {
     id: "0",
-    title: "Figma",
+    title: "Gear",
     icon: figma,
     width: 26,
     height: 36,
