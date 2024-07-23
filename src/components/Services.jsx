@@ -3,6 +3,7 @@ import Button from "./Button";
 import project1Image from '../assets/services/county.jpeg';
 import project2Image from '../assets/services/sikita.jpg';
 import project3Image from '../assets/services/knhpcare.jpg';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const projects = [
   {
@@ -71,9 +72,10 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="text-center mt-10">
-        <Button href="/services" white>
+        <Button href="/projects" white>
          View More
     </Button>
+     
         </div>
 
         <div className="absolute bottom-0 left-0 z-0 h-1/3 w-full border-b" style={{ backgroundImage: 'linear-gradient(to right top, rgba(79, 70, 229, 0.2) 0%, transparent 50%, transparent 100%)', borderColor: 'rgba(92, 79, 240, 0.2)' }}></div>
