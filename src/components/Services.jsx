@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from "./Button";
 import project1Image from '../assets/services/county.jpeg';
 import project2Image from '../assets/services/sikita.jpg';
 import project3Image from '../assets/services/knhpcare.jpg';
@@ -47,20 +48,32 @@ const FeaturedProjects = () => {
 
         <div className="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <div key={index} className="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow">
-              <img src={project.image} alt={`Project ${index + 1}`} className="w-full h-50 object-cover mb-4 rounded-md" />
-              <h3 className="mt-6 text-gray-400">{project.title}</h3>
-              <p className="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
-                {visibleDescription[index] ? project.description : `${project.description.substring(0, 100)}...`}
-                <button
-                  onClick={() => toggleDescriptionVisibility(index)}
-                  className="text-blue-500 ml-2 focus:outline-none"
-                >
-                  {visibleDescription[index] ? 'View Less' : 'View More'}
-                </button>
-              </p>
+            <div key={index} className="rounded-md border border-neutral-800 bg-neutral-900/50 text-center shadow">
+              <div className="relative">
+                <img src={project.image} alt={`Project ${index + 1}`} className="w-full h-50 object-cover mb-4 rounded-t-md" />
+                <div className="absolute bottom-0 w-full p-4 bg-black bg-opacity-50">
+                  <h3 className="text-white">{project.title}</h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <p className="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
+                  {visibleDescription[index] ? project.description : `${project.description.substring(0, 100)}...`}
+                  <button
+                    onClick={() => toggleDescriptionVisibility(index)}
+                    className="text-blue-500 ml-2 focus:outline-none"
+                  >
+                    {visibleDescription[index] ? 'View Less' : 'View More'}
+                  </button>
+                </p>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+        <Button href="/services" white>
+         View More
+    </Button>
         </div>
 
         <div className="absolute bottom-0 left-0 z-0 h-1/3 w-full border-b" style={{ backgroundImage: 'linear-gradient(to right top, rgba(79, 70, 229, 0.2) 0%, transparent 50%, transparent 100%)', borderColor: 'rgba(92, 79, 240, 0.2)' }}></div>

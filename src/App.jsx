@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 // import Pricing from "./components/Pricing";
 // import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
-
+import Location from "./components/Location";
 const App = () => {
   return (
     <>
@@ -17,6 +17,7 @@ const App = () => {
          <Benefits />
         <Collaboration />
        <Services />
+       <Location /> 
         {/* <Pricing />
         <Roadmap />
         <Footer />     */}

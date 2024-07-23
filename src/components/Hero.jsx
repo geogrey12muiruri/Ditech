@@ -22,7 +22,7 @@ const Hero = () => {
     >
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-        <h4 className="h1 mb-6">
+        <h4 className="h4 mb-6">
       Welcome to Ditech Engineering&nbsp;
       <span className="inline-block relative">
         A Leading Electromechanical Consultants{" "}
